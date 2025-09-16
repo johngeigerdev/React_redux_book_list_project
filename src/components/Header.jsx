@@ -1,4 +1,4 @@
-
+import { NavLink } from 'react-router-dom';
 
 function Header({pageTitle}) {
 
@@ -8,16 +8,21 @@ function Header({pageTitle}) {
             <h1>{pageTitle}</h1>
 
             <div className="header-btns">
-                
-                    <button className="btn">
-                        Books
-                    </button>
+               <NavLink to="/"> {/* NavLink auto adds an 'active' class when something is selected. you can define what the active class should do in the CSS file  */}
+                <button className="btn">
+                  Books
+                </button>
+              </NavLink>
+              
+              <NavLink to="/add-book">
+                <button className="btn">
+                    Add Book +
+                </button>
+              </NavLink>
+              
 
 
-                    <button className="btn">
-                        Add Book +
-                    </button>
-               
+          
             </div>
     
       </>
